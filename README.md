@@ -17,3 +17,5 @@ bandit5: -//-, we don't proceed into the inhere directory in order to use the fi
 bandit6: -//-, this one is a bit trickier as need to search the whole server. For that we use find / -type f -user bandit7 -group bandit6 -size 33c with a bit of added code such as 2>/dev/null to not be given the error messages of "Permission denied".
 
 bandit7: -//-, the file data.txt is filled with many randome words and codes. Using grep -rw 'data.txt' -e 'millionth' we search from the source "data.txt" the pattern "millionth" and we get the corresponding line which includes the code
+
+bandit8: -//-, same as before we have a plethora of codes and we look for the one that is unique. instinctively we use the uniq command with the -u parameter. but that return many wrong results so first we sort the list and we end up using sort data.txt | uniq -u.
