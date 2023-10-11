@@ -13,3 +13,5 @@ bandit3: -//-, cd in the inhere directory, using ls -a -l I get the list of all 
 bandit4: -//-, once in the inhere directory and using the ls command we find multiple -fileXX files. All are dashed file names so we use once again the cat < -fileXX to find the one with the code inside
 
 bandit5: -//-, we don't proceed into the inhere directory in order to use the find command. We use the parameters given by the instructions (find ~/inhere -size 1033c -type f) and then once in the correct directory ls -a to reveal the hidden file.
+
+bandit6: -//-, this one is a bit trickier as need to search the whole server. For that we use find / -type f -user bandit7 -group bandit6 -size 33c with a bit of added code such as 2>/dev/null to not be given the error messages of "Permission denied".
