@@ -23,3 +23,5 @@ bandit8: -//-, same as before we have a plethora of codes and we look for the on
 bandit9: -//-, to find the single readable string we use strings data.txt | grep =. By using strings we only keep the human readable parts of the file and with grep we keep the lines which contain the symbol '=' and we get the code.
 
 bandit10: -//-, this one is fairly simple. Base64 is an encoding method of randomizing characters. Luckily by typing base64 --decode we get the decoded version.
+
+bandit11: -//-, here we have a string encoded to ROT13 or ROT-13 which rotates the characters (as the name rot suggests). To solve that we use cat but we add the tr (translate) command. Now tr takes 2 sets of inputs and we use the range '[A-Za-z]', which we know it's a range since we add -. Now the second set of input is '[N-ZA-Mn-za-m]' we are basically breaking the alphabet into the mapping of ROT13 and giving cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' we get the answer.
