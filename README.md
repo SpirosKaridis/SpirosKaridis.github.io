@@ -20,6 +20,6 @@ bandit7: -//-, the file data.txt is filled with many randome words and codes. Us
 
 bandit8: -//-, same as before we have a plethora of codes and we look for the one that is unique. instinctively we use the uniq command with the -u parameter. but that return many wrong results so first we sort the list and we end up using sort data.txt | uniq -u.
 
-bandit9: -//-, to find the single readable string we use strings data.txt | grep =. By using strings we only keep the human readable parts of the file and with grep we keep the lines which contain the symbol '=' and we get the code
+bandit9: -//-, to find the single readable string we use strings data.txt | grep =. By using strings we only keep the human readable parts of the file and with grep we keep the lines which contain the symbol '=' and we get the code.
 
 bandit10: -//-, this one is fairly simple. Base64 is an encoding method of randomizing characters. Luckily by typing base64 --decode we get the decoded version.
